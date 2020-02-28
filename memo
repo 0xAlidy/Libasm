@@ -1,0 +1,74 @@
+https://www.unilim.fr/pages_perso/tristan.vaccon/cours_nasm.pdf
+
+http://flatassembler.net/docs.php?article=manual
+
+https://esauvage.developpez.com/tutoriels/asm/assembleur-intel-avec-nasm/?page=page_1
+
+http://www.lacl.fr/tan/asm
+
+https://cs.lmu.edu/~ray/notes/nasmtutorial/
+
+https://beta.hackndo.com/assembly-basics/
+
+http://pageperso.lif.univ-mrs.fr/~alexis.nasr/Ens/Compilation/cm06_x86.pdf
+
+http://deamonftp.free.fr/deamoncrack/Pages/cours-asm.htm#1
+
+david wybiral videos
+
+[compiler intel x64]
+
+nasm -f macho64 main.s && ld -lSystem -o main main.o && ./main
+
+nasm -f macho64 name.s
+gcc name.o main.c 
+./a.out
+
+[infos]
+
+r en x64 sinon c'est e 32 bits ex: rax : 64 eax: 32 ax : 16  bits
+La stack grandi vers le bas (adresse diminue quand la stack grandi)
+lea = mov + inc
+
+[Taille]
+    b => byte (char)
+    w => 2 bytes 
+    d => 4 bytes (int)
+    q => 8 bytes
+
+[segment]
+.bss => variables non initialise
+    utliser res
+.data => variables initialises
+.text => code executable
+
+[registre]
+
+rax => Les valeurs sont renvoyées par les fonctions dans ce registre.  
+rbx =>
+rdi - used to pass 1st argument to functions
+rsi - used to pass 2nd argument to functions
+rdx - used to pass 3rd argument to functions
+rcx - used to pass 4th argument to functions
+r8 - used to pass 5th argument to functions
+r9 - used to pass 6th argument to functions
+rbp => registre qui garde l'adresse de debut de la stack 
+rsp => registre qui garde l'adresse du haut de la stack (mise a jour a chaque modif)
+rip => registre qui contient l'adresse de la prochaine execution
+[appelles systeme]
+https://github.com/opensource-apple/xnu/blob/master/bsd/kern/syscalls.master
+(0X2000000 + number of function)
+ 
+[argc, argv]
+[rsp] = argc
+[rsp + 8 * n] = n ieme argument
+
+[conditions]
+
+jmp => saute a un endroit
+je => saute si ==
+jne => saute si !=
+jg => saute si >
+jge => saute si >=
+jl => saute si <
+jle => saute si <= 
