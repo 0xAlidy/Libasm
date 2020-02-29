@@ -6,7 +6,7 @@
 #    By: alidy <alidy@student.le-101.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/28 11:42:58 by alidy             #+#    #+#              #
-#    Updated: 2020/02/28 12:42:40 by alidy            ###   ########lyon.fr    #
+#    Updated: 2020/02/29 15:04:40 by alidy            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ $(NAME)	:	$(OBJS)
 		$(CC) $(FLAG) macho64 -s $<
 
 test : $(NAME)
-	   gcc $(NAME) main.c && ./a.out
+	   gcc -w $(NAME) main.c && ./a.out
 
 clean	:
 		/bin/rm -f $(OBJS)
