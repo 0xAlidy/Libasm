@@ -14,5 +14,5 @@ loop:
   jmp loop 
 
 exit:
-  pop rbp
+  leave
   ret 

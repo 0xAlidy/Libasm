@@ -6,7 +6,7 @@
 /*   By: alidy <alidy@student.le-101.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/21 03:10:43 by alidy             #+#    #+#             */
-/*   Updated: 2020/02/29 15:02:41 by alidy            ###   ########lyon.fr   */
+/*   Updated: 2020/02/29 18:09:07 by alidy            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <errno.h>
+# include <string.h>
 
 int		ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, const char *src);

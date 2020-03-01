@@ -16,5 +16,5 @@ loop:
 
 exit:
  mov rax, rdi
- pop rbp
+ leave
  ret

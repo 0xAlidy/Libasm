@@ -1,5 +1,4 @@
 global _ft_write
-
 section .text
 
 _ft_write:
@@ -7,12 +6,11 @@ _ft_write:
  mov rbp, rsp
  mov rax, 0X2000004
  syscall
- cmp rdx, 0
- jne error
- pop rbp
+ jc error
+ leave
  ret
 
 error:
  mov rax, -1
- pop rbp
+ leave
  ret

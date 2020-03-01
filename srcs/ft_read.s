@@ -1,4 +1,5 @@
 global _ft_read
+extern  _error
 
 section .text
 
@@ -7,12 +8,11 @@ _ft_read:
  mov rbp, rsp
  mov rax, 0X2000003
  syscall
- cmp rdx, 0
- jne error
- pop rbp
+ jc error
+ leave
  ret
 
 error:
  mov rax, -1
- pop rbp
+ leave
  ret

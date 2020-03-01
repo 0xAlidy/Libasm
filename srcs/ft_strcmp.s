@@ -19,5 +19,5 @@ loop:
 exit:
  sub al, byte[rsi + rcx]
  movsx rax, al
- pop rbp
+ leave
  ret
